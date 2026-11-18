@@ -71,7 +71,7 @@ h1{{font-family:Lora;font-weight:700;font-size:78px;line-height:1.07;letter-spac
 
 /* ---- bignum ---- */
 .bq{{font-family:Lora;font-weight:700;font-size:58px;line-height:1.12;max-width:980px}}
-.bnum{{font-family:Lora;font-weight:700;font-size:210px;line-height:.9;color:var(--acc);letter-spacing:-3px;margin:18px 0 6px}}
+.bnum{{font-family:Lora;font-weight:700;font-size:230px;line-height:1.05;color:var(--acc);letter-spacing:-3px;margin:0 0 28px}}
 .blab{{font-size:34px;font-weight:700;color:rgba(255,255,255,.9);max-width:820px;line-height:1.28}}
 .bnum2{{display:flex;align-items:baseline;gap:40px;flex-wrap:wrap}}
 .bn2{{font-family:Lora;font-weight:700;font-size:120px;line-height:.95;color:var(--acc);letter-spacing:-2px}}
@@ -144,7 +144,7 @@ def card(c):
             cells = ''.join(f'<div class="bn2">{e(a)}<span>{e(b)}</span></div>' for a, b in c['stats'])
             body = f'<h1 style="font-size:60px;max-width:960px">{e(c["headline"])}</h1><div class="main"><div class="bnum2">{cells}</div></div>'
         else:
-            body = (f'<div class="bq">{e(c["headline"])}</div><div class="main" style="justify-content:flex-start;padding-top:10px">'
+            body = (f'<div class="bq">{e(c["headline"])}</div><div class="main" style="justify-content:center">'
                     f'<div class="bnum">{e(c["num"])}</div><div class="blab">{e(c["label"])}</div></div>')
         return page(f'<div class="wrap">{eb}{body}{foot()}</div>', th)
 
