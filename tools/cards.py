@@ -97,8 +97,8 @@ h1{{font-family:Lora;font-weight:700;font-size:78px;line-height:1.07;letter-spac
 .foot.line{{height:132px;background:transparent;margin:0 0 30px;padding:22px 0 0;border-top:2px solid var(--line);gap:24px}}
 .line .crowc{{flex:1;display:flex;gap:34px;align-items:center}}
 .line .cline{{color:var(--fg);font-size:19px}}
-.line .qrw{{flex-direction:row;gap:12px;background:#fff;border-radius:12px;padding:7px 12px 7px 7px}}
-.line .qr{{width:80px;height:80px}} .line .qrl{{writing-mode:vertical-rl;transform:rotate(180deg);font-size:11px}}
+.line .qrw{{flex-direction:column;gap:4px;background:#fff;border-radius:12px;padding:8px 10px 6px}}
+.line .qr{{width:74px;height:74px}} .line .qrl{{font-size:10px;letter-spacing:1.5px}}
 
 /* ---- checklist ---- */
 .cards{{display:flex;flex-direction:column;gap:20px}}
@@ -162,7 +162,7 @@ def _contacts(cls='contacts'):
     return (f'<div class="{cls}">'
             f'<div class="cline">{GLOBE_SM}<span class="web-t">www.globalbookkeepingservices.com</span></div>'
             f'<div class="cline">{PHONE_SM}<span>+1 (646) 837-7740</span></div>'
-            f'<div class="cline">{WA_SM}<span>+91 94083 19123</span></div></div>')
+            f'<div class="cline">{PHONE_SM}<span>+91 94083 19123</span></div></div>')
 def _logos(pill=False):
     l = ''.join(f'<img class="lg" src="data:image/png;base64,{b}">' for b in LOGOS)
     return f'<div class="logos{" lgpill" if pill else ""}">{l}</div>'
